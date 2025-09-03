@@ -1,0 +1,87 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: projektarbeit.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+The style file: natdin.bst
+Reallocating 'name_of_file' (item size: 1) to 4 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: ML2.bib
+Warning--entry type for "noauthor_tensorboard_nodate" isn't style-file defined
+--line 2 of file ML2.bib
+Warning--entry type for "noauthor_crossentropyloss_nodate" isn't style-file defined
+--line 9 of file ML2.bib
+Warning--entry type for "noauthor_reducelronplateau_nodate" isn't style-file defined
+--line 27 of file ML2.bib
+Warning--entry type for "noauthor_deepseek_nodate" isn't style-file defined
+--line 34 of file ML2.bib
+Warning--entry type for "noauthor_optuna_nodate" isn't style-file defined
+--line 44 of file ML2.bib
+Warning--entry type for "noauthor_chatgpt_nodate" isn't style-file defined
+--line 54 of file ML2.bib
+Warning--entry type for "noauthor_emnist_nodate" isn't style-file defined
+--line 64 of file ML2.bib
+Warning--entry type for "noauthor_project_nodate" isn't style-file defined
+--line 75 of file ML2.bib
+Warning--entry type for "noauthor_imagenet_nodate" isn't style-file defined
+--line 84 of file ML2.bib
+Warning--entry type for "noauthor_mnist_nodate" isn't style-file defined
+--line 91 of file ML2.bib
+Warning--entry type for "noauthor_adam_nodate" isn't style-file defined
+--line 115 of file ML2.bib
+Warning--to sort, need author or key in noauthor_emnist_nodate
+Warning--to sort, need author or key in noauthor_mnist_nodate
+Warning--to sort, need author or key in noauthor_project_nodate
+Warning--to sort, need author or key in noauthor_imagenet_nodate
+Warning--to sort, need author or key in noauthor_crossentropyloss_nodate
+Warning--to sort, need author or key in noauthor_adam_nodate
+Warning--to sort, need author or key in noauthor_reducelronplateau_nodate
+Warning--to sort, need author or key in noauthor_tensorboard_nodate
+Warning--to sort, need author or key in noauthor_optuna_nodate
+Warning--to sort, need author or key in noauthor_chatgpt_nodate
+Warning--to sort, need author or key in noauthor_deepseek_nodate
+You've used 12 entries,
+            4728 wiz_defined-function locations,
+            922 strings with 7676 characters,
+and the built_in function-call counts, 4036 in all, are:
+= -- 386
+> -- 36
+< -- 34
++ -- 64
+- -- 12
+* -- 314
+:= -- 553
+add.period$ -- 12
+call.type$ -- 12
+change.case$ -- 40
+chr.to.int$ -- 2
+cite$ -- 34
+duplicate$ -- 161
+empty$ -- 399
+format.name$ -- 21
+if$ -- 901
+int.to.chr$ -- 11
+int.to.str$ -- 1
+missing$ -- 72
+newline$ -- 64
+num.names$ -- 4
+pop$ -- 104
+preamble$ -- 1
+purify$ -- 64
+quote$ -- 0
+skip$ -- 198
+stack$ -- 0
+substring$ -- 197
+swap$ -- 27
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 156
+warning$ -- 11
+while$ -- 7
+width$ -- 0
+write$ -- 134
+(There were 22 warnings)

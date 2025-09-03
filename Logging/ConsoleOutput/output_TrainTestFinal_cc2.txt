@@ -1,0 +1,482 @@
+            config_CombinedClassifier = {
+                'linear_out_1': 256,
+                'linear_out_2': 256,
+                'dropout': 0.18,
+            }
+            config = {
+                "lr": 1.436504053514967e-05,
+                "weight_decay": 0.000425,
+                "num_epochs": 17,
+                "batch_size": 32,
+                "only_train_classifier": False,
+                "sched_patience": 4,
+                "sched_factor": 0.442897,
+                "sched_min_lr": 0.000001,
+                'train_with_CombinedClassifier': True,
+                'probabilities': [0.10, 0.84, 0.62],
+                'config_CombinedClassifier': config_CombinedClassifier
+            }
+
+            emnist = EMNISTModel(experiment_name='030_TrainTestFinal_cc2_e17', validation_dataset_for_training=True)
+            emnist.train(config=config, logging=True)
+            emnist.test(test_with_CombinedClassifier=config['train_with_CombinedClassifier'])
+
+
+
+
+Länge: 697932
+---rebalance_test_from_train()---
+100%|██████████| 36/36 [00:00<00:00, 1462.60it/s]
+100%|██████████| 36/36 [00:00<00:00, 6288.31it/s]
+Prepare Test-Dataset: 100%|██████████| 36/36 [00:00<00:00, 376.69label/s]
+Klasse 0: Test 1000 - original Test 5778
+Klasse 1: Test 1000 - original Test 6330
+Klasse 2: Test 1000 - original Test 5869
+Klasse 3: Test 1000 - original Test 5969
+Klasse 4: Test 1000 - original Test 5619
+Klasse 5: Test 1000 - original Test 5190
+Klasse 6: Test 1000 - original Test 5705
+Klasse 7: Test 1000 - original Test 6139
+Klasse 8: Test 1000 - original Test 5633
+Klasse 9: Test 1000 - original Test 5686
+Klasse A: Test 1000 - original Test 1062
+Klasse B: Test 648 - Train 352
+Klasse C: Test 1000 - original Test 1739
+Klasse D: Test 779 - Train 221
+Klasse E: Test 851 - Train 149
+Klasse F: Test 1000 - original Test 1440
+Klasse G: Test 447 - Train 553
+Klasse H: Test 521 - Train 479
+Klasse I: Test 1000 - original Test 2048
+Klasse J: Test 626 - Train 374
+Klasse K: Test 382 - Train 618
+Klasse L: Test 810 - Train 190
+Klasse M: Test 1000 - original Test 1485
+Klasse a: Test 1000 - original Test 1644
+Klasse b: Test 853 - Train 147
+Klasse c: Test 432 - Train 568
+Klasse d: Test 1000 - original Test 1683
+Klasse e: Test 1000 - original Test 4092
+Klasse f: Test 400 - Train 600
+Klasse g: Test 589 - Train 411
+Klasse h: Test 1000 - original Test 1479
+Klasse i: Test 427 - Train 573
+Klasse j: Test 317 - Train 683
+Klasse k: Test 466 - Train 534
+Klasse l: Test 1000 - original Test 2535
+Klasse m: Test 464 - Train 536
+Länge danch: 507942
+100%|██████████| 36/36 [00:00<00:00, 2243.94it/s]
+Prepare Train-Dataset: 100%|██████████| 36/36 [00:00<00:00, 76.58label/s]
+Label 0: Train 5000 orig 5000
+Trainingsdaten nach Label 0: 5000
+Label 1: Train 5000 orig 5000
+Trainingsdaten nach Label 1: 10000
+Label 2: Train 5000 orig 5000
+Trainingsdaten nach Label 2: 15000
+Label 3: Train 5000 orig 5000
+Trainingsdaten nach Label 3: 20000
+Label 4: Train 5000 orig 5000
+Trainingsdaten nach Label 4: 25000
+Label 5: Train 5000 orig 5000
+Trainingsdaten nach Label 5: 30000
+Label 6: Train 5000 orig 5000
+Trainingsdaten nach Label 6: 35000
+Label 7: Train 5000 orig 5000
+Trainingsdaten nach Label 7: 40000
+Label 8: Train 5000 orig 5000
+Trainingsdaten nach Label 8: 45000
+Label 9: Train 5000 orig 5000
+Trainingsdaten nach Label 9: 50000
+Label A: Train 5000 orig 5000
+Trainingsdaten nach Label A: 55000
+Label B: Train 3526 augmentated 1474
+Trainingsdaten nach Label B: 60000
+Label C: Train 5000 orig 5000
+Trainingsdaten nach Label C: 65000
+Label D: Train 4341 augmentated 659
+Trainingsdaten nach Label D: 70000
+Label E: Train 4785 augmentated 215
+Trainingsdaten nach Label E: 75000
+Label F: Train 5000 orig 5000
+Trainingsdaten nach Label F: 80000
+Label G: Train 1964 augmentated 3036
+Trainingsdaten nach Label G: 85000
+Label H: Train 2673 augmentated 2327
+Trainingsdaten nach Label H: 90000
+Label I: Train 5000 orig 5000
+Trainingsdaten nach Label I: 95000
+Label J: Train 3388 augmentated 1612
+Trainingsdaten nach Label J: 100000
+Label K: Train 1850 augmentated 3150
+Trainingsdaten nach Label K: 105000
+Label L: Train 4886 augmentated 114
+Trainingsdaten nach Label L: 110000
+Label M: Train 5000 orig 5000
+Trainingsdaten nach Label M: 115000
+Label a: Train 5000 orig 5000
+Trainingsdaten nach Label a: 120000
+Label b: Train 5000 orig 5000
+Trainingsdaten nach Label b: 125000
+Label c: Train 2286 augmentated 2714
+Trainingsdaten nach Label c: 130000
+Label d: Train 5000 orig 5000
+Trainingsdaten nach Label d: 135000
+Label e: Train 5000 orig 5000
+Trainingsdaten nach Label e: 140000
+Label f: Train 1961 augmentated 3039
+Trainingsdaten nach Label f: 145000
+Label g: Train 3276 augmentated 1724
+Trainingsdaten nach Label g: 150000
+Label h: Train 5000 orig 5000
+Trainingsdaten nach Label h: 155000
+Label i: Train 2152 augmentated 2848
+Trainingsdaten nach Label i: 160000
+Label j: Train 1213 augmentated 3787
+Trainingsdaten nach Label j: 165000
+Label k: Train 1957 augmentated 3043
+Trainingsdaten nach Label k: 170000
+Label l: Train 5000 orig 5000
+Trainingsdaten nach Label l: 175000
+Label m: Train 2109 augmentated 2891
+Trainingsdaten nach Label m: 180000
+{'lr': 1.436504053514967e-05, 'weight_decay': 0.000425, 'num_epochs': 17, 'batch_size': 32, 'only_train_classifier': False, 'sched_patience': 4, 'sched_factor': 0.442897, 'sched_min_lr': 1e-06, 'train_with_CombinedClassifier': True, 'probabilities': [0.1, 0.84, 0.62], 'config_CombinedClassifier': {'linear_out_1': 256, 'linear_out_2': 256, 'dropout': 0.18}}
+
+
+-------------- Start New Training: ---------------
+
+
+Epoch 1/17: 100%|██████████| 4500/4500 [00:57<00:00, 78.84batch/s, loss=3.0143, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 103.55batch/s]
+top1_score    0.651725
+top3_score    0.675400
+top5_score    0.685996
+dtype: float64
+valid_loss:  2.9843796452416314
+Learning rate after epoch 1: [1.436504053514967e-05]
+top1_score    0.651725
+top3_score    0.675400
+top5_score    0.685996
+dtype: float64
+
+            best_value  on_step
+top1_score    0.651725        0
+top3_score    0.675400        0
+top5_score    0.685996        0
+Epoch 2/17: 100%|██████████| 4500/4500 [00:58<00:00, 77.35batch/s, loss=2.8628, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 103.57batch/s]
+top1_score    0.756686
+top3_score    0.769218
+top5_score    0.772127
+dtype: float64
+valid_loss:  2.8780915256076387
+Learning rate after epoch 2: [1.436504053514967e-05]
+top1_score    0.756686
+top3_score    0.769218
+top5_score    0.772127
+dtype: float64
+
+            best_value  on_step
+top1_score    0.756686        1
+top3_score    0.769218        1
+top5_score    0.772127        1
+Epoch 3/17: 100%|██████████| 4500/4500 [00:56<00:00, 79.19batch/s, loss=2.8838, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 103.69batch/s]
+top1_score    0.776923
+top3_score    0.791058
+top5_score    0.792822
+dtype: float64
+valid_loss:  2.8566944792005753
+Learning rate after epoch 3: [1.436504053514967e-05]
+top1_score    0.776923
+top3_score    0.791058
+top5_score    0.792822
+dtype: float64
+
+            best_value  on_step
+top1_score    0.776923        2
+top3_score    0.791058        2
+top5_score    0.792822        2
+Epoch 4/17: 100%|██████████| 4500/4500 [00:57<00:00, 78.63batch/s, loss=2.8642, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 104.30batch/s]
+top1_score    0.778916
+top3_score    0.793412
+top5_score    0.802362
+dtype: float64
+valid_loss:  2.8543639469146727
+Learning rate after epoch 4: [1.436504053514967e-05]
+top1_score    0.778916
+top3_score    0.793412
+top5_score    0.802362
+dtype: float64
+
+            best_value  on_step
+top1_score    0.778916        3
+top3_score    0.793412        3
+top5_score    0.802362        3
+Epoch 5/17: 100%|██████████| 4500/4500 [00:57<00:00, 77.99batch/s, loss=2.8326, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 103.58batch/s]
+top1_score    0.796878
+top3_score    0.812529
+top5_score    0.814400
+dtype: float64
+valid_loss:  2.8362682751549615
+Learning rate after epoch 5: [1.436504053514967e-05]
+top1_score    0.796878
+top3_score    0.812529
+top5_score    0.814400
+dtype: float64
+
+            best_value  on_step
+top1_score    0.796878        4
+top3_score    0.812529        4
+top5_score    0.814400        4
+Epoch 6/17: 100%|██████████| 4500/4500 [00:56<00:00, 79.41batch/s, loss=2.8231, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 103.14batch/s]
+top1_score    0.796581
+top3_score    0.811057
+top5_score    0.813193
+dtype: float64
+valid_loss:  2.836099370320638
+Learning rate after epoch 6: [1.436504053514967e-05]
+top1_score    0.796581
+top3_score    0.811057
+top5_score    0.813193
+dtype: float64
+
+            best_value  on_step
+top1_score    0.796878        4
+top3_score    0.812529        4
+top5_score    0.814400        4
+Epoch 7/17: 100%|██████████| 4500/4500 [00:57<00:00, 78.34batch/s, loss=2.8359, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 103.17batch/s]
+top1_score    0.814782
+top3_score    0.834010
+top5_score    0.837371
+dtype: float64
+valid_loss:  2.8195192614661324
+Learning rate after epoch 7: [1.436504053514967e-05]
+top1_score    0.814782
+top3_score    0.834010
+top5_score    0.837371
+dtype: float64
+
+            best_value  on_step
+top1_score    0.814782        6
+top3_score    0.834010        6
+top5_score    0.837371        6
+Epoch 8/17: 100%|██████████| 4500/4500 [00:57<00:00, 78.58batch/s, loss=2.7934, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 104.36batch/s]
+top1_score    0.830768
+top3_score    0.848338
+top5_score    0.850442
+dtype: float64
+valid_loss:  2.80351871003045
+Learning rate after epoch 8: [1.436504053514967e-05]
+top1_score    0.830768
+top3_score    0.848338
+top5_score    0.850442
+dtype: float64
+
+            best_value  on_step
+top1_score    0.830768        7
+top3_score    0.848338        7
+top5_score    0.850442        7
+Epoch 9/17: 100%|██████████| 4500/4500 [00:56<00:00, 79.48batch/s, loss=2.7702, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 104.20batch/s]
+top1_score    0.830878
+top3_score    0.846674
+top5_score    0.848603
+dtype: float64
+valid_loss:  2.80342588657803
+Learning rate after epoch 9: [1.436504053514967e-05]
+top1_score    0.830878
+top3_score    0.846674
+top5_score    0.848603
+dtype: float64
+
+            best_value  on_step
+top1_score    0.830878        8
+top3_score    0.848338        7
+top5_score    0.850442        7
+Epoch 10/17: 100%|██████████| 4500/4500 [00:57<00:00, 77.97batch/s, loss=2.8173, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 103.51batch/s]
+top1_score    0.831896
+top3_score    0.848851
+top5_score    0.851445
+dtype: float64
+valid_loss:  2.802792742623223
+Learning rate after epoch 10: [1.436504053514967e-05]
+top1_score    0.831896
+top3_score    0.848851
+top5_score    0.851445
+dtype: float64
+
+            best_value  on_step
+top1_score    0.831896        9
+top3_score    0.848851        9
+top5_score    0.851445        9
+Epoch 11/17: 100%|██████████| 4500/4500 [00:56<00:00, 79.54batch/s, loss=2.7758, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 104.36batch/s]
+top1_score    0.842930
+top3_score    0.860356
+top5_score    0.862867
+dtype: float64
+valid_loss:  2.7917897444831
+Learning rate after epoch 11: [1.436504053514967e-05]
+top1_score    0.842930
+top3_score    0.860356
+top5_score    0.862867
+dtype: float64
+
+            best_value  on_step
+top1_score    0.842930       10
+top3_score    0.860356       10
+top5_score    0.862867       10
+Epoch 12/17: 100%|██████████| 4500/4500 [00:57<00:00, 78.14batch/s, loss=2.7754, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 104.34batch/s]
+top1_score    0.845405
+top3_score    0.860453
+top5_score    0.862488
+dtype: float64
+valid_loss:  2.7879978697035046
+Learning rate after epoch 12: [1.436504053514967e-05]
+top1_score    0.845405
+top3_score    0.860453
+top5_score    0.862488
+dtype: float64
+
+            best_value  on_step
+top1_score    0.845405       11
+top3_score    0.860453       11
+top5_score    0.862867       10
+Epoch 13/17: 100%|██████████| 4500/4500 [00:56<00:00, 79.49batch/s, loss=2.7539, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 104.20batch/s]
+top1_score    0.844289
+top3_score    0.860741
+top5_score    0.863874
+dtype: float64
+valid_loss:  2.7895023199717204
+Learning rate after epoch 13: [1.436504053514967e-05]
+top1_score    0.844289
+top3_score    0.860741
+top5_score    0.863874
+dtype: float64
+
+            best_value  on_step
+top1_score    0.845405       11
+top3_score    0.860741       12
+top5_score    0.863874       12
+Epoch 14/17: 100%|██████████| 4500/4500 [00:56<00:00, 79.72batch/s, loss=2.7853, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 104.58batch/s]
+top1_score    0.857981
+top3_score    0.873264
+top5_score    0.875443
+dtype: float64
+valid_loss:  2.77695538520813
+Learning rate after epoch 14: [1.436504053514967e-05]
+top1_score    0.857981
+top3_score    0.873264
+top5_score    0.875443
+dtype: float64
+
+            best_value  on_step
+top1_score    0.857981       13
+top3_score    0.873264       13
+top5_score    0.875443       13
+Epoch 15/17: 100%|██████████| 4500/4500 [00:56<00:00, 79.37batch/s, loss=2.7569, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 104.60batch/s]
+top1_score    0.856176
+top3_score    0.872948
+top5_score    0.875000
+dtype: float64
+valid_loss:  2.7792871754964192
+Learning rate after epoch 15: [1.436504053514967e-05]
+top1_score    0.856176
+top3_score    0.872948
+top5_score    0.875000
+dtype: float64
+
+            best_value  on_step
+top1_score    0.857981       13
+top3_score    0.873264       13
+top5_score    0.875443       13
+Epoch 16/17: 100%|██████████| 4500/4500 [00:57<00:00, 78.33batch/s, loss=2.7562, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 103.06batch/s]
+top1_score    0.857723
+top3_score    0.872714
+top5_score    0.874701
+dtype: float64
+valid_loss:  2.776134349187215
+Learning rate after epoch 16: [1.436504053514967e-05]
+top1_score    0.857723
+top3_score    0.872714
+top5_score    0.874701
+dtype: float64
+
+            best_value  on_step
+top1_score    0.857981       13
+top3_score    0.873264       13
+top5_score    0.875443       13
+Epoch 17/17: 100%|██████████| 4500/4500 [00:57<00:00, 78.49batch/s, loss=2.7843, lr=0.000014]
+
+Model validation...
+100%|██████████| 1125/1125 [00:10<00:00, 103.03batch/s]
+top1_score    0.859014
+top3_score    0.875046
+top5_score    0.876858
+dtype: float64
+valid_loss:  2.7752486864725747
+Learning rate after epoch 17: [1.436504053514967e-05]
+top1_score    0.859014
+top3_score    0.875046
+top5_score    0.876858
+dtype: float64
+
+            best_value  on_step
+top1_score    0.859014       16
+top3_score    0.875046       16
+top5_score    0.876858       16
+Training finished!
+
+
+------ start model testing ------
+100%|██████████| 1125/1125 [00:09<00:00, 121.55batch/s]
+Testing finished!
+top1_score    0.820111
+top3_score    0.837861
+top5_score    0.839944
+dtype: float64
+Loss: 2.813755667368571

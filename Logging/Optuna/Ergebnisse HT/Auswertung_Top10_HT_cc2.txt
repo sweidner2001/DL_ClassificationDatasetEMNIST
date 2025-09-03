@@ -1,0 +1,289 @@
+############################### Konfig ################################
+config_CombinedClassifier = {
+                'linear_out_1': trial.suggest_categorical("linear_out_1", [128, 256, 512]),
+                'linear_out_2': trial.suggest_categorical("linear_out_2", [64, 128, 256]),
+                'dropout': trial.suggest_float("dropout", 0.0, 0.4)
+            }
+        config = {
+            "lr": trial.suggest_float("lr", 1e-5, 1e-2, log=True),
+            "weight_decay": trial.suggest_float("weight_decay", 0.0002, 0.01, log=True),
+            "num_epochs": 25,
+            "batch_size": trial.suggest_categorical("batch_size", [32, 64]),
+            "only_train_classifier": False,
+            "sched_patience": 5,
+            "sched_factor": trial.suggest_float("sched_factor", 0.4, 0.7),
+            "sched_min_lr": 1e-6,
+            'train_with_CombinedClassifier': True,
+            'probabilities': [trial.suggest_float("a1", 0.1, 1), trial.suggest_float("a2", 0.1, 1),trial.suggest_float("a3", 0.1, 1)],
+            'config_CombinedClassifier': config_CombinedClassifier
+        }
+
+
+############################### Infos ################################
+ nohup python mainForShell.py HTuning --Trials 60 > /home/c611/output_HT_tm2_cc2.out 2>&1 &
+
+ Experiment-Name: HyperparameterTuning_1
+
+
+
+############################### Hyperparameter Tuning ################################
+ Beste Hyperparameter: {'linear_out_1': 256, 'linear_out_2': 256, 'sched_factor': 0.17352834622559538, 'lr': 1.436504053514967e-05, 'weight_decay': 0.00042474032760911497, 'batch_size': 32, 'sched_patience': 4, 'sched_min_lr': 1e-05, 'a1': 0.10573110587830598, 'a2': 0.8399009736482208, 'a3': 0.6165562109062541}
+Bestes Trial #43:
+  Value: 0.8590327501296997
+  Params:
+    linear_out_1: 256
+    linear_out_2: 256
+    sched_factor: 0.17352834622559538
+    lr: 1.436504053514967e-05
+    weight_decay: 0.00042474032760911497
+    batch_size: 32
+    sched_patience: 4
+    sched_min_lr: 1e-05
+    a1: 0.10573110587830598
+    a2: 0.8399009736482208
+    a3: 0.6165562109062541
+
+
+number                                                              43
+value                                                         0.859033
+datetime_start                              2025-06-25 04:25:40.719651
+datetime_complete                           2025-06-25 04:48:41.593020
+duration                                        0 days 00:23:00.873369
+params_a1                                                     0.105731
+params_a2                                                     0.839901
+params_a3                                                     0.616556
+params_batch_size                                                   32
+params_linear_out_1                                                256
+params_linear_out_2                                                256
+params_lr                                                     0.000014
+params_sched_factor                                           0.173528
+params_sched_min_lr                                            0.00001
+params_sched_patience                                                4
+params_weight_decay                                           0.000425
+user_attrs_num_epochs                                               20
+user_attrs_only_train_classifier                                 False
+user_attrs_train_with_CombinedClassifier                          True
+state                                                         COMPLETE
+Name: 43, dtype: object
+
+
+
+number                                                              55
+value                                                         0.846639
+datetime_start                              2025-06-25 06:17:14.222109
+datetime_complete                           2025-06-25 06:35:00.338263
+duration                                        0 days 00:17:46.116154
+params_a1                                                     0.141497
+params_a2                                                      0.95928
+params_a3                                                     0.580399
+params_batch_size                                                   64
+params_linear_out_1                                                256
+params_linear_out_2                                                256
+params_lr                                                     0.000023
+params_sched_factor                                           0.180009
+params_sched_min_lr                                            0.00001
+params_sched_patience                                                6
+params_weight_decay                                           0.000895
+user_attrs_num_epochs                                               20
+user_attrs_only_train_classifier                                 False
+user_attrs_train_with_CombinedClassifier                          True
+state                                                         COMPLETE
+Name: 55, dtype: object
+
+
+
+number                                                               7
+value                                                         0.843295
+datetime_start                              2025-06-24 22:45:54.800607
+datetime_complete                           2025-06-24 23:03:34.273904
+duration                                        0 days 00:17:39.473297
+params_a1                                                     0.519083
+params_a2                                                     0.781225
+params_a3                                                     0.375757
+params_batch_size                                                   64
+params_linear_out_1                                                256
+params_linear_out_2                                                128
+params_lr                                                      0.00004
+params_sched_factor                                           0.142408
+params_sched_min_lr                                           0.000001
+params_sched_patience                                                9
+params_weight_decay                                           0.000429
+user_attrs_num_epochs                                               20
+user_attrs_only_train_classifier                                 False
+user_attrs_train_with_CombinedClassifier                          True
+state                                                         COMPLETE
+Name: 7, dtype: object
+
+
+
+number                                                              46
+value                                                          0.84255
+datetime_start                              2025-06-25 05:00:05.271228
+datetime_complete                           2025-06-25 05:22:59.258488
+duration                                        0 days 00:22:53.987260
+params_a1                                                      0.44376
+params_a2                                                     0.540839
+params_a3                                                     0.687378
+params_batch_size                                                   32
+params_linear_out_1                                                256
+params_linear_out_2                                                256
+params_lr                                                      0.00001
+params_sched_factor                                           0.203118
+params_sched_min_lr                                            0.00001
+params_sched_patience                                                5
+params_weight_decay                                           0.000876
+user_attrs_num_epochs                                               20
+user_attrs_only_train_classifier                                 False
+user_attrs_train_with_CombinedClassifier                          True
+state                                                         COMPLETE
+Name: 46, dtype: object
+
+
+
+number                                                              29
+value                                                         0.841504
+datetime_start                              2025-06-25 01:40:53.813035
+datetime_complete                           2025-06-25 02:04:45.391575
+duration                                        0 days 00:23:51.578540
+params_a1                                                     0.248148
+params_a2                                                     0.746197
+params_a3                                                     0.201143
+params_batch_size                                                   32
+params_linear_out_1                                                256
+params_linear_out_2                                                256
+params_lr                                                     0.000015
+params_sched_factor                                            0.10952
+params_sched_min_lr                                            0.00001
+params_sched_patience                                                8
+params_weight_decay                                           0.000213
+user_attrs_num_epochs                                               20
+user_attrs_only_train_classifier                                 False
+user_attrs_train_with_CombinedClassifier                          True
+state                                                         COMPLETE
+Name: 29, dtype: object
+
+
+
+number                                                              35
+value                                                         0.841228
+datetime_start                              2025-06-25 03:00:59.716912
+datetime_complete                           2025-06-25 03:23:52.064159
+duration                                        0 days 00:22:52.347247
+params_a1                                                     0.445975
+params_a2                                                     0.841364
+params_a3                                                     0.461375
+params_batch_size                                                   32
+params_linear_out_1                                                256
+params_linear_out_2                                                256
+params_lr                                                     0.000026
+params_sched_factor                                           0.186023
+params_sched_min_lr                                            0.00001
+params_sched_patience                                                5
+params_weight_decay                                           0.000362
+user_attrs_num_epochs                                               20
+user_attrs_only_train_classifier                                 False
+user_attrs_train_with_CombinedClassifier                          True
+state                                                         COMPLETE
+Name: 35, dtype: object
+
+
+
+number                                                              19
+value                                                         0.839379
+datetime_start                              2025-06-25 00:04:19.764751
+datetime_complete                           2025-06-25 00:27:13.287810
+duration                                        0 days 00:22:53.523059
+params_a1                                                     0.115979
+params_a2                                                     0.277973
+params_a3                                                     0.258262
+params_batch_size                                                   32
+params_linear_out_1                                                128
+params_linear_out_2                                                256
+params_lr                                                     0.000011
+params_sched_factor                                           0.007747
+params_sched_min_lr                                            0.00001
+params_sched_patience                                                6
+params_weight_decay                                           0.000523
+user_attrs_num_epochs                                               20
+user_attrs_only_train_classifier                                 False
+user_attrs_train_with_CombinedClassifier                          True
+state                                                         COMPLETE
+Name: 19, dtype: object
+
+
+
+number                                                              31
+value                                                         0.836251
+datetime_start                              2025-06-25 02:08:19.704432
+datetime_complete                           2025-06-25 02:32:41.133621
+duration                                        0 days 00:24:21.429189
+params_a1                                                     0.174445
+params_a2                                                     0.913168
+params_a3                                                     0.294746
+params_batch_size                                                   32
+params_linear_out_1                                                256
+params_linear_out_2                                                256
+params_lr                                                     0.000018
+params_sched_factor                                           0.125527
+params_sched_min_lr                                            0.00001
+params_sched_patience                                                8
+params_weight_decay                                           0.000102
+user_attrs_num_epochs                                               20
+user_attrs_only_train_classifier                                 False
+user_attrs_train_with_CombinedClassifier                          True
+state                                                         COMPLETE
+Name: 31, dtype: object
+
+
+
+number                                                              48
+value                                                         0.834313
+datetime_start                              2025-06-25 05:30:59.493455
+datetime_complete                           2025-06-25 05:53:55.525419
+duration                                        0 days 00:22:56.031964
+params_a1                                                      0.37108
+params_a2                                                      0.50173
+params_a3                                                     0.691729
+params_batch_size                                                   32
+params_linear_out_1                                                256
+params_linear_out_2                                                256
+params_lr                                                     0.000024
+params_sched_factor                                           0.229656
+params_sched_min_lr                                            0.00001
+params_sched_patience                                                4
+params_weight_decay                                           0.000334
+user_attrs_num_epochs                                               20
+user_attrs_only_train_classifier                                 False
+user_attrs_train_with_CombinedClassifier                          True
+state                                                         COMPLETE
+Name: 48, dtype: object
+
+
+
+number                                                              56
+value                                                         0.832227
+datetime_start                              2025-06-25 06:35:00.348903
+datetime_complete                           2025-06-25 06:52:44.950912
+duration                                        0 days 00:17:44.602009
+params_a1                                                     0.328139
+params_a2                                                     0.956479
+params_a3                                                     0.563773
+params_batch_size                                                   64
+params_linear_out_1                                                256
+params_linear_out_2                                                256
+params_lr                                                      0.00003
+params_sched_factor                                           0.179314
+params_sched_min_lr                                           0.000001
+params_sched_patience                                                5
+params_weight_decay                                           0.002382
+user_attrs_num_epochs                                               20
+user_attrs_only_train_classifier                                 False
+user_attrs_train_with_CombinedClassifier                          True
+state                                                         COMPLETE
+Name: 56, dtype: object
+
+
+
+{'linear_out_1': 256, 'linear_out_2': 256, 'sched_factor': 0.17352834622559538, 'lr': 1.436504053514967e-05, 'weight_decay': 0.00042474032760911497, 'batch_size': 32, 'sched_patience': 4, 'sched_min_lr': 1e-05, 'a1': 0.10573110587830598, 'a2': 0.8399009736482208, 'a3': 0.6165562109062541}
+
+Process finished with exit code 0

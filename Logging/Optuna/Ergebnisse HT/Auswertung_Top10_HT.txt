@@ -1,0 +1,118 @@
+############################### Konfig ################################
+        config = {
+            "lr": trial.suggest_float("lr", 1e-5, 1e-2, log=True),
+            "weight_decay": trial.suggest_float("weight_decay", 0.0001, 0.01, log=True),
+            "num_epochs": trial.suggest_int("num_epochs", 12, 35),
+            "batch_size": trial.suggest_categorical("batch_size", [16, 32, 64]),
+            "only_train_classifier": trial.suggest_categorical("only_train_classifier", [True, False]),
+            "sched_patience": trial.suggest_int("sched_patience", 2, 15),
+            "sched_factor": trial.suggest_float("sched_factor", 0.1, 0.9),
+            "sched_min_lr": trial.suggest_categorical("sched_min_lr", [1e-5, 1e-6]),
+            'train_with_CombinedClassifier': False,
+            'probabilities': [trial.suggest_float("a1", 0.1, 1), trial.suggest_float("a2", 0.1, 1), trial.suggest_float("a3", 0.1, 1), trial.suggest_float("a4", 0.1, 1)],
+            'config_CombinedClassifier': None
+        }
+
+
+############################### Hyperparameter Tuning ################################
+Start
+number                                                              14
+value                                                         0.903469
+datetime_start                              2025-06-24 03:42:34.479963
+datetime_complete                           2025-06-24 04:15:26.036242
+duration                                        0 days 00:32:51.556279
+
+params_batch_size                                                   32
+params_lr                                                     0.000033
+params_num_epochs                                                   25
+params_only_train_classifier                                     False
+params_sched_factor                                           0.550694
+params_sched_min_lr                                           0.000001
+params_sched_patience                                                4
+params_weight_decay                                            0.00132
+user_attrs_config_CombinedClassifier                              None
+user_attrs_train_with_CombinedClassifier                         False
+state                                                         COMPLETE
+Name: 14, dtype: object
+
+
+
+number                                                               3
+value                                                         0.903084
+datetime_start                              2025-06-24 00:51:08.791310
+datetime_complete                           2025-06-24 01:16:54.395523
+duration                                        0 days 00:25:45.604213
+
+params_batch_size                                                   64
+params_lr                                                     0.000127
+params_num_epochs                                                   29
+params_only_train_classifier                                     False
+params_sched_factor                                           0.505414
+params_sched_min_lr                                           0.000001
+params_sched_patience                                               11
+params_weight_decay                                           0.001048
+user_attrs_config_CombinedClassifier                              None
+user_attrs_train_with_CombinedClassifier                         False
+state                                                         COMPLETE
+Name: 3, dtype: object
+
+
+
+number                                                              27
+value                                                         0.898356
+datetime_start                              2025-06-24 05:58:51.721310
+datetime_complete                           2025-06-24 06:22:30.694992
+duration                                        0 days 00:23:38.973682
+
+params_batch_size                                                   32
+params_lr                                                     0.000021
+params_num_epochs                                                   18
+params_only_train_classifier                                     False
+params_sched_factor                                           0.628197
+params_sched_min_lr                                           0.000001
+params_sched_patience                                                3
+params_weight_decay                                           0.006839
+user_attrs_config_CombinedClassifier                              None
+user_attrs_train_with_CombinedClassifier                         False
+state                                                         COMPLETE
+Name: 27, dtype: object
+
+
+
+number                                                               4
+value                                                         0.898195
+datetime_start                              2025-06-24 01:16:54.406652
+datetime_complete                           2025-06-24 01:58:49.971907
+duration                                        0 days 00:41:55.565255
+params_batch_size                                                   16
+params_lr                                                     0.000022
+params_num_epochs                                                   18
+params_only_train_classifier                                     False
+params_sched_factor                                           0.138721
+params_sched_min_lr                                           0.000001
+params_sched_patience                                                3
+params_weight_decay                                           0.003448
+user_attrs_config_CombinedClassifier                              None
+user_attrs_train_with_CombinedClassifier                         False
+state                                                         COMPLETE
+Name: 4, dtype: object
+
+
+
+number                                                              17
+value                                                         0.896037
+datetime_start                              2025-06-24 04:25:53.081120
+datetime_complete                           2025-06-24 04:52:07.845617
+duration                                        0 days 00:26:14.764497
+params_batch_size                                                   32
+params_lr                                                     0.000035
+params_num_epochs                                                   25
+params_only_train_classifier                                     False
+params_sched_factor                                           0.763737
+params_sched_min_lr                                           0.000001
+params_sched_patience                                                7
+params_weight_decay                                           0.001023
+user_attrs_config_CombinedClassifier                              None
+user_attrs_train_with_CombinedClassifier                         False
+state                                                           PRUNED
+Name: 17, dtype: object
